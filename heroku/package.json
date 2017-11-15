@@ -1,0 +1,22 @@
+{
+  "name": "velov-map",
+  "description": "A physical map for Velov",
+  "version": "1.0.0",
+  "author": {
+    "name": "Etienne Villedieu",
+    "email": "etienne.villedieu@econocom.com",
+    "url": "http://etiennevilledieu.fr"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "express": "^4.16.2",
+    "ejs": "^2.5.7",
+    "body-parser": "^1.18.2",
+    "node-crontab": "^0.0.8"
+  },
+  "keywords": [
+    "velov",
+    "decaux"
+  ],
+  "main": "index.js"
+}
