@@ -196,14 +196,15 @@ void hit_api(int station, int id_led) {
     if(line[1] == '{'){ //Si on a le JSON
       Serial.print(line);
 
-      StaticJsonBuffer<200> jsonBuffer;
-      JsonObject& root = jsonBuffer.parseObject(line);
-      if (!root.success()) {
+      JsonDocument doc;
+      DeserializationError error = deserializeJson(doc, line);
+
+      if (error) {
         Serial.println("parseObject() failed");
       }
       else {
-        int velov = root["velov"];
-        int places = root["places"];
+        int velov = doc["velov"];
+        int places = doc["places"];
 
         tab_velov[id_led] = velov;
         tab_places[id_led] = places;
